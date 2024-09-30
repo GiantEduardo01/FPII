@@ -44,6 +44,9 @@ public class Alumno {
         this.promedioPonderado = promedioPonderado;
     }
     
+    public boolean tieneMayorPromedioQue(Alumno a) {
+        return this.getPromedioPonderado() >= a.getPromedioPonderado();
+    }
     
     @Override
     public String toString() {
