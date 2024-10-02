@@ -29,7 +29,7 @@ public class Ejercicio03 {
             e.mostrarMayorPromedio();
             e.mostrarMenorPromedio();
             e.mostrarRankingPorAnio();
-            //e.mostrarRanking();
+            e.mostrarRanking();
             System.out.print("Ingrese (q) si quiere salir: ");
             continuar = scann.nextLine();
         } while (!continuar.equals("q"));

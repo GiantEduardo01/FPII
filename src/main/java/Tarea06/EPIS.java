@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class EPIS {
     private final ArrayList<ArrayList<Alumno>> alumnado = new ArrayList<>();
+    private final ArrayList<Alumno> alumnadoLineal = new ArrayList<>();
     
     /*Constructor que crea 5 ArrayList para cada año en alumnado*/
     public EPIS() {
@@ -25,7 +26,7 @@ public class EPIS {
     }
     
     
-    //-----------------------------Métodos para manejo versátil de las estructuras-----------------------------
+    //-----------------------------Métodos para manejo versátil de las estructura alumnado-----------------------------
     private int aniosEPIS() { //Retorna número de alumnos por anio
         return UtilGenerarDatosEPIS.NUMERO_ANIOS;
     }
@@ -51,8 +52,26 @@ public class EPIS {
     private Alumno obtenerAlumnoAnioPosicion(int anio, int pos) { //Retorna el alumno de un anio en una posición
         return this.alumnado.get(anio).get(pos);
     }
-    //-----------------------------Métodos para manejo eficiente de las estructuras-----------------------------
+    //-----------------------------Métodos para manejo eficiente de las estructura alumnado-----------------------------
     
+
+    //-----------------------------Métodos para manejo versátil de las estructura alumnado lineal-----------------------------
+    private void addAlumnadoLineal(Alumno alum) {
+        this.alumnadoLineal.add(alum);
+    }
+    
+    private void setAlumnadoLineal(int index, Alumno alum) {
+        this.alumnadoLineal.set(index, alum);
+    }
+    
+    private int sizeAlumnadoLineal() {
+        return this.alumnadoLineal.size();
+    }
+    
+    private Alumno obtenerDeAlumnadoLineal(int index) {
+        return this.alumnadoLineal.get(index);
+    }
+    //-----------------------------Métodos para manejo versátil de las estructura alumnado lineal-----------------------------
     
     //-----------------------------Métodos para simular ingreso de datos y mostrar datos-----------------------------
     public void ingresarDatos() {
@@ -65,6 +84,10 @@ public class EPIS {
     
     public void mostrarAlumnado() {
         System.out.println(this.toStringTotal());
+    }
+    
+    public void mostrarAlumnadoLineal() {
+        System.out.println(this.toStringAlumnadoLineal());
     }
     //-----------------------------Métodos para simular ingreso de datos y mostrar datos-----------------------------
     
@@ -119,9 +142,9 @@ public class EPIS {
     }
     
     public void mostrarRanking() { //Muestra el ranking global
-        //rankear();
+        rankear();
         System.out.println("\nRanking de todo EPIS");
-        mostrarAlumnado();
+        mostrarAlumnadoLineal();
     }
     //-----------------------------Métodos para mostrar Ranking por anio y global-----------------------------
     
@@ -148,6 +171,14 @@ public class EPIS {
             for (int j = 0; j < alumnosPorAnioEPIS(i); j++) {
                 str += obtenerAlumnoAnioPosicion(i, j) + "\n";
             }
+        }
+        return str;
+    }
+    
+    private String toStringAlumnadoLineal() {
+        String str = "";
+        for (int i = 0; i < sizeAlumnadoLineal(); i++) {
+            str += obtenerDeAlumnadoLineal(i) + "\n";
         }
         return str;
     }
@@ -239,43 +270,32 @@ public class EPIS {
             colocarAlumno(anio, j + 1, key);
         }
     }
-    /*
+    
     private void rankear() {
-        int anios = this.alumnado.length;
-        int alumnos = this.alumnado[0].length;
-        Tarea05.Alumno[] linealAlumnos = new Tarea05.Alumno[anios * alumnos];
-       
-        int k = 0;
-        for (int i = 0; i < this.alumnado.length; i++) { //Se transfieren todos los alumnos a un arreglo lineal (unidimensional)
-            for (int j = 0; j < this.alumnado[i].length; j++) {
-                linealAlumnos[k] = this.alumnado[i][j];
-                k++;
+        for (int i = 0; i < aniosEPIS(); i++) { //Se transfieren todos los alumnos al atributo ArrayList lineal (unidimensional)
+            for (int j = 0; j < alumnosPorAnioEPIS(i); j++) {
+                Alumno alum = obtenerAlumnoAnioPosicion(i, j);
+                addAlumnadoLineal(alum);
             }
         }
         
         //Selection sort
-        for (int i = 1; i < linealAlumnos.length; i++) {
+        for (int i = 1; i < sizeAlumnadoLineal(); i++) {
             int index = i - 1;
-            for (int j = i; j < linealAlumnos.length; j++) {
-                if (linealAlumnos[j].tieneMayorPromedioQue(linealAlumnos[index])) {
+            for (int j = i; j < sizeAlumnadoLineal(); j++) {
+                Alumno alum = obtenerDeAlumnadoLineal(j);
+                Alumno mayorAlum = obtenerDeAlumnadoLineal(index);
+                if (alum.tieneMayorPromedioQue(mayorAlum)) {
                     index = j;
                 }
             }
-            Tarea05.Alumno temp = linealAlumnos[i - 1];
-            linealAlumnos[i - 1] = linealAlumnos[index];
-            linealAlumnos[index] = temp;
-        }
-        
-        k = 0;
-        for (int i = 0; i < this.alumnado.length; i++) { //Se transfiere de nuevo al arreglo bidimensional
-            for (int j = 0; j < this.alumnado[i].length; j++) {
-                this.alumnado[i][j] = linealAlumnos[k];
-                k++;
-            }
+            
+            Alumno temp = obtenerDeAlumnadoLineal(i - 1);
+            Alumno alumPrime = obtenerDeAlumnadoLineal(index);
+            
+            setAlumnadoLineal(i - 1, alumPrime);
+            setAlumnadoLineal(index, temp);
         }
     }   
-    */
     //-----------------------------Métodos para Rankear por anio y global-----------------------------
-    
-    
 }
