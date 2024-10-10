@@ -21,7 +21,7 @@ public class Ejercicio01 {
         c1.mostrar();
         c1.depositar(1000);
         c1.mostrar();
-        
+
         c2.mostrar();
         c2.retirar(500);
         c2.mostrar();
