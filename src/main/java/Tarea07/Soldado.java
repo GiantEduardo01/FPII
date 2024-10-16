@@ -23,7 +23,7 @@ public class Soldado {
 
     @Override
     public String toString() {
-        return "Soldado{" + "nombre=" + nombre + ", columna=" + columna + ", fila=" + fila + ", nivelVida=" + nivelVida + '}';
+        return this.nombre + ", " + this.nivelVida + " => " + this.columna + this.fila;
     }
     
     
