@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Tarea09;
+package Tarea09.Proyect01;
+
+import Tarea09.Proyect02.Fraction;
 
 /**
  *

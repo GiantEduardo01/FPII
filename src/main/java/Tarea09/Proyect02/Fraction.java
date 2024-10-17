@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Tarea09;
+package Tarea09.Proyect02;
 
 import java.util.Random;
 
@@ -80,7 +80,7 @@ public class Fraction {
         if (a == 0) {
             return b;
         }
-        return MCD(b % a, a);
+        return MCD(b % a, a); //Recursive call
     }
     
     public static Fraction sumar(Fraction f1, Fraction f2) { 

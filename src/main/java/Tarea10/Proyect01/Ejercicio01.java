@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Tarea10;
+package Tarea10.Proyect01;
+
+import Tarea10.Proyect02.Car;
 
 /**
  *
