@@ -4,7 +4,7 @@
  */
 package Tarea10.Proyect01;
 
-import Tarea10.Proyect02.Car;
+import Tarea10.Proyect01.Car;
 
 /**
  *

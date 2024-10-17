@@ -17,13 +17,8 @@ public abstract class Coordenada {
         this.segundaComponente = segundaComponente;
     }
     
-    public abstract double getPrimeraComponente();
-    public abstract void setPrimerComponente(double primeraComponente);
-    
-    public abstract double getSegundaComponente();
-    public abstract void setSegundaComponente(double segundaComponente);
-    
     public abstract double calcularDistancia(Coordenada coor); //For use polymorphism 
+    public abstract void mostrarCoordenadas(Coordenada c2);
     
     @Override
     public String toString() {

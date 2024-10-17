@@ -15,32 +15,25 @@ public class CoordenadaPolar extends Coordenada {
     }
 
     @Override
-    public double getPrimeraComponente() {
-        return super.primeraComponente;
-    }
-
-    @Override
-    public void setPrimerComponente(double primeraComponente) {
-        super.primeraComponente = primeraComponente;
-    }
-
-    @Override
-    public double getSegundaComponente() {
-        return super.segundaComponente;
-    }
-
-    @Override
-    public void setSegundaComponente(double segundaComponente) {
-        super.segundaComponente = segundaComponente;
-    }
-
-    @Override
     public double calcularDistancia(Coordenada coor) {
-        return 0.0;
+        double lado1 = super.primeraComponente;
+        double angulo1 = super.segundaComponente;
+        
+        double lado2 = coor.primeraComponente;
+        double angulo2 = coor.segundaComponente;
+        
+        double theta = Math.abs(angulo1 - angulo2);
+        return Math.sqrt(Math.pow(lado1, 2) + Math.pow(lado2, 2) - (2*lado1*lado2*Math.cos(theta)));
     }
     
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public void mostrarCoordenadas(Coordenada c2) {
+        System.out.println("Primera Coordenada: " + this);
+        System.out.println("Segunda Coordenada: " + c2);
     }
 }

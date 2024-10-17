@@ -15,36 +15,27 @@ public class CoordenadaRectangular extends Coordenada {
     }
 
     @Override
-    public double getPrimeraComponente() {
-        return super.primeraComponente;
-    }
-
-    @Override
-    public void setPrimerComponente(double primeraComponente) {
-        super.primeraComponente = primeraComponente;
-    }
-
-    @Override
-    public double getSegundaComponente() {
-        return super.segundaComponente;
-    }
-
-    @Override
-    public void setSegundaComponente(double segundaComponente) {
-        super.segundaComponente = segundaComponente;
-    }
-
-    @Override
-    public double calcularDistancia(Coordenada coor) {
+    public double calcularDistancia(Coordenada coor) { //Distancia Euclidiana
         double x1 = super.primeraComponente;
         double y1 = super.segundaComponente;
-        double x2 = coor.getPrimeraComponente(); //polymorphismo method
-        double y2 = coor.getSegundaComponente();
+        double x2 = coor.primeraComponente; //polymorphism method
+        double y2 = coor.segundaComponente;
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
     
     public double calcularDistanciaManhattan(Coordenada coor) {
-        return 0.0;
+        double x1 = super.primeraComponente;
+        double y1 = super.segundaComponente;
+        double x2 = coor.primeraComponente; //polymorphism method
+        double y2 = coor.segundaComponente;
+        
+        return Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    }
+    
+    @Override
+    public void mostrarCoordenadas(Coordenada c2) {
+        System.out.println("Primera Coordenada: " + this);
+        System.out.println("Segunda Coordenada: " + c2);
     }
     
     @Override
