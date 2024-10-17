@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.Tarea10.proyect01">
+  <ClassDiagramComponents>
+    <Class name="Ejercicio02" package="Tarea10.proyect01" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Car" package="Tarea10.proyect01" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="make" type="String" visibility="private"/>
+        <Field name="year" type="int" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="make"/>
+          <Argument type="int" name="year"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getMake" returnType="String" visibility="public"/>
+        <Method name="getYear" returnType="int" visibility="public"/>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setMake" returnType="Car" visibility="public">
+          <Argument type="String" name="make"/>
+        </Method>
+        <Method name="setYear" returnType="Car" visibility="public">
+          <Argument type="int" name="year"/>
+        </Method>
+        <Method name="setColor" returnType="Car" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="makeCopy" returnType="Car" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Car" name="c"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Tarea10.proyect01.Car" target="Tarea10.proyect01.Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
