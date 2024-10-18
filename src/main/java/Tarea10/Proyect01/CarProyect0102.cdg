@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ClassDiagram name="main.java.Tarea10.proyect01">
+<ClassDiagram name="main.java.Tarea10.Proyect01">
   <ClassDiagramComponents>
-    <Class name="Ejercicio02" package="Tarea10.proyect01" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="Ejercicio02" package="Tarea10.Proyect01" visibility="public" xPosition="514.0" yPosition="279.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -11,7 +11,16 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Car" package="Tarea10.proyect01" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Ejercicio01" package="Tarea10.Proyect01" visibility="public" xPosition="514.0" yPosition="156.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Car" package="Tarea10.Proyect01" visibility="public" xPosition="149.0" yPosition="156.0">
       <Fields>
         <Field name="make" type="String" visibility="private"/>
         <Field name="year" type="int" visibility="private"/>
@@ -47,6 +56,6 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="Tarea10.proyect01.Car" target="Tarea10.proyect01.Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Tarea10.Proyect01.Car" target="Tarea10.Proyect01.Car" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
