@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.Tarea10.Proyect03">
+  <ClassDiagramComponents>
+    <Class name="Fraction" package="Tarea10.Proyect03" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="numerador" type="int" visibility="private"/>
+        <Field name="denominador" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="numerador"/>
+          <Argument type="int" name="denominador"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="rangInfA"/>
+          <Argument type="int" name="rangSupA"/>
+          <Argument type="int" name="rangInfB"/>
+          <Argument type="int" name="rangSupB"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNumerador" returnType="int" visibility="public"/>
+        <Method name="setNumerador" returnType="void" visibility="public">
+          <Argument type="int" name="numerador"/>
+        </Method>
+        <Method name="getDenominador" returnType="int" visibility="public"/>
+        <Method name="setDenominador" returnType="void" visibility="public">
+          <Argument type="int" name="denominador"/>
+        </Method>
+        <Method name="sumar" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="restar" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="multiplicar" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="dividir" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="simplificarCc" returnType="Fraction" visibility="public"/>
+        <Method name="simplificar" returnType="void" visibility="public"/>
+        <Method name="sumarCC" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="restarCC" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="multiplicarCC" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="dividirCC" returnType="Fraction" visibility="public">
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="simplificarCC" returnType="Fraction" visibility="public"/>
+        <Method name="MCD" returnType="int" visibility="private">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+        <Method name="mostrarFracciones" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Fraction" name="f1"/>
+          <Argument type="Fraction" name="f2"/>
+        </Method>
+        <Method name="mostrarRespuesta" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="operacion"/>
+          <Argument type="Fraction" name="f"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toStringFraccion" returnType="String" visibility="public"/>
+        <Method name="toStringDecimal" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio04" package="Tarea10.Proyect03" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio05" package="Tarea10.Proyect03" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio06" package="Tarea10.Proyect03" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Tarea10.Proyect03.Fraction" target="Tarea10.Proyect03.Fraction" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
