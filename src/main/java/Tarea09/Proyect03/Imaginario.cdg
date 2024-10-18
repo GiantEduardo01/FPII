@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.Tarea09.Proyect03">
+  <ClassDiagramComponents>
+    <Class name="Imaginario" package="Tarea09.Proyect03" visibility="public" xPosition="71.0" yPosition="267.0">
+      <Fields>
+        <Field name="parteReal" type="double" visibility="private"/>
+        <Field name="parteImaginaria" type="double" visibility="private"/>
+        <Field name="IMAGINARIO" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="parteReal"/>
+          <Argument type="double" name="parteImaginaria"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getParteReal" returnType="double" visibility="public"/>
+        <Method name="setParteReal" returnType="void" visibility="public">
+          <Argument type="double" name="parteReal"/>
+        </Method>
+        <Method name="getParteImaginaria" returnType="double" visibility="public"/>
+        <Method name="setParteImaginaria" returnType="void" visibility="public">
+          <Argument type="double" name="parteImaginaria"/>
+        </Method>
+        <Method name="toStringVector" returnType="String" visibility="public"/>
+        <Method name="toStringOperacion" returnType="String" visibility="public"/>
+        <Method name="suma" returnType="Imaginario" visibility="public">
+          <Argument type="Imaginario" name="num"/>
+        </Method>
+        <Method name="resta" returnType="Imaginario" visibility="public">
+          <Argument type="Imaginario" name="num"/>
+        </Method>
+        <Method name="multiplicacion" returnType="Imaginario" visibility="public">
+          <Argument type="Imaginario" name="num"/>
+        </Method>
+        <Method name="modulo" returnType="double" visibility="public"/>
+        <Method name="conjugado" returnType="Imaginario" visibility="public"/>
+        <Method name="suma" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="resta" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="multiplicacion" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="modulo" returnType="double" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i"/>
+        </Method>
+        <Method name="conjugado" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i"/>
+        </Method>
+        <Method name="makeCopy" returnType="Imaginario" visibility="public"/>
+        <Method name="mostrarNumeros" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="mostrarRespuesta" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="operacion"/>
+          <Argument type="Imaginario" name="rpta"/>
+        </Method>
+        <Method name="mostrarDouble" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="operacion"/>
+          <Argument type="double" name="rpta"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio03" package="Tarea09.Proyect03" visibility="public" xPosition="80.0" yPosition="13.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="suma" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="resta" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="multiplicacion" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Method>
+        <Method name="modulo" returnType="double" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i"/>
+        </Method>
+        <Method name="conjugado" returnType="Imaginario" visibility="public" isStatic="true">
+          <Argument type="Imaginario" name="i"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="Tarea09.Proyect03" visibility="public" xPosition="580.0" yPosition="300.0">
+      <Fields>
+        <Field name="OPERACIONES" type="String[]" visibility="package" isStatic="true" isFinal="true"/>
+        <Field name="scann" type="Scanner" visibility="package" isStatic="true"/>
+        <Field name="imaginarios" type="ArrayList&lt;Imaginario&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Imaginario" name="i1"/>
+          <Argument type="Imaginario" name="i2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="menuInteractivo" returnType="void" visibility="public"/>
+        <Method name="mostrarOpciones" returnType="void" visibility="private"/>
+        <Method name="ingresarOpcion" returnType="String" visibility="private"/>
+        <Method name="efectuarOpcion" returnType="void" visibility="private">
+          <Argument type="String" name="opcion"/>
+        </Method>
+        <Method name="añadirImaginarios" returnType="void" visibility="private"/>
+        <Method name="mostrarImaginarios" returnType="void" visibility="private"/>
+        <Method name="operacionesMetodos" returnType="void" visibility="private"/>
+        <Method name="emplearTipoMetodo" returnType="void" visibility="private">
+          <Argument type="String" name="tipoMetodo"/>
+        </Method>
+        <Method name="makeCopy" returnType="ArrayList&lt;Imaginario&gt;" visibility="private">
+          <Argument type="ArrayList&lt;Imaginario&gt;" name="imaginarios"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Tarea09.Proyect03.Imaginario" target="Tarea09.Proyect03.Imaginario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Tarea09.Proyect03.Menu" target="Tarea09.Proyect03.Imaginario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Tarea09.Proyect03.Ejercicio03" target="Tarea09.Proyect03.Imaginario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="imaginarios" source="Tarea09.Proyect03.Menu" target="Tarea09.Proyect03.Imaginario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Imaginario&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
