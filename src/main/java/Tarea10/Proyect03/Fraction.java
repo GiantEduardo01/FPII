@@ -149,7 +149,7 @@ public class Fraction {
             this.numerador /=  mcd;
             this.denominador /= mcd;
         }
-        System.out.println("Fracción número 01: " + this.toStringFraccion() + "; " + this.toStringDecimal());
+        System.out.println("Fracción número 01: " + this);
         System.out.println();
         return this;
     }
@@ -163,12 +163,17 @@ public class Fraction {
     
     //Métodos estáticos para mostrar información de fracciones y operaciones
     public static void mostrarFracciones(Fraction f1, Fraction f2) {
-        System.out.println("Fracción número 01: " + f1.toStringFraccion() + "; " + f1.toStringDecimal());
-        System.out.println("Fracción número 02: " + f2.toStringFraccion() + "; " + f2.toStringDecimal());
+        System.out.println("Fracción número 01: " + f1);
+        System.out.println("Fracción número 02: " + f2);
     }
 
     public static void mostrarRespuesta(String operacion, Fraction f) {
-        System.out.println(operacion + ": " + f.toStringFraccion() + "; " + f.toStringDecimal());
+        System.out.println(operacion + ": " + f);
+    }
+    
+    @Override
+    public String toString() {
+        return this.toStringDecimal() + "; " + this.toStringFraccion();
     }
     
     public String toStringFraccion() {
@@ -176,7 +181,7 @@ public class Fraction {
     }
     
     public String toStringDecimal() {
-        double num = (int)this.numerador / this.denominador;
+        double num = (double)this.numerador / this.denominador;
         return num + "";
     }
 }
