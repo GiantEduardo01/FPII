@@ -42,6 +42,4 @@ public class CoordenadaRectangular extends Coordenada {
     public String toString() {
         return super.toString();
     }
-    
-    
 }

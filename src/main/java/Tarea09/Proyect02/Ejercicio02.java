@@ -10,7 +10,7 @@ import Tarea09.Proyect02.Fraction;
  *
  * @author eduardo
  */
-public class Ejercicio01 {
+public class Ejercicio02 {
 
     /**
      * @param args the command line arguments

@@ -181,7 +181,6 @@ public class Menu {
                     }
                     break;
             }
-            
             if (i < 3) {
                 Imaginario.mostrarRespuesta(OPERACIONES[i], rpta1);      
             } else {
@@ -195,7 +194,6 @@ public class Menu {
             }
         }
         System.out.println();
-        
     }
     
     private ArrayList<Imaginario> makeCopy(ArrayList<Imaginario> imaginarios) {

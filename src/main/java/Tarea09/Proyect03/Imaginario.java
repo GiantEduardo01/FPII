@@ -162,7 +162,4 @@ public class Imaginario {
     public static void mostrarDouble(String operacion, double rpta) {
         System.out.println(operacion + ": " + rpta);
     } 
-    
-
-    
 }
