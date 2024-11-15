@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.Practica14">
+  <ClassDiagramComponents>
+    <Class name="Practica14" package="Practica14" visibility="public" xPosition="104.0" yPosition="581.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Consesionario" package="Practica14" visibility="public" xPosition="413.0" yPosition="506.0">
+      <Fields>
+        <Field name="autos" type="ArrayList&lt;Auto&gt;" visibility="private"/>
+        <Field name="nameCompany" type="String" visibility="private"/>
+        <Field name="employees" type="ArrayList&lt;Vendedor&gt;" visibility="private"/>
+        <Field name="boss" type="Gerente" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameCompany"/>
+          <Argument type="Gerente" name="boss"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addVendedor" returnType="void" visibility="public">
+          <Argument type="Vendedor" name="e"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Trabajador" package="Practica14" visibility="public" xPosition="231.0" yPosition="1069.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="DNI" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tiempoEnAnios" type="double" visibility="private"/>
+        <Field name="salario" type="double" visibility="private"/>
+        <Field name="categoriaString" type="String" visibility="private" isStatic="true"/>
+        <Field name="sueldoBase" type="double" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTiempoEnAnios" returnType="double" visibility="public"/>
+        <Method name="setTiempoEnAnios" returnType="void" visibility="public">
+          <Argument type="double" name="tiempoEnAnios"/>
+        </Method>
+        <Method name="setSueldoBase" returnType="void" visibility="public" isStatic="true">
+          <Argument type="double" name="sueldoBase"/>
+        </Method>
+        <Method name="getSalario" returnType="double" visibility="public"/>
+        <Method name="setSalario" returnType="void" visibility="public">
+          <Argument type="double" name="salario"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gerente" package="Practica14" visibility="public" xPosition="56.0" yPosition="793.0">
+      <Fields>
+        <Field name="bono" type="double" visibility="private"/>
+        <Field name="nivelDePrivilegio" type="int" visibility="private"/>
+        <Field name="MINIMO_TIEMPO_ANIOS" type="double" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="BONO_POR_PUNTO_DE_PRIVILEGIO" type="double" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="SUELDO" type="double" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="nivelDePrivilegio"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularSalario" returnType="void" visibility="private"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Auto" package="Practica14" visibility="public" xPosition="407.0" yPosition="252.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="clase" type="String" visibility="private"/>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="ID" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="clase"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="ID"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vendedor" package="Practica14" visibility="public" xPosition="595.0" yPosition="774.0">
+      <Fields>
+        <Field name="ventasMes" type="int" visibility="private"/>
+        <Field name="ventasTotales" type="int" visibility="private"/>
+        <Field name="comision" type="double" visibility="private"/>
+        <Field name="COMISION_BASICA" type="double" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="COMISION_MEDIA" type="double" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="COMISION_ALTA" type="double" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="SUELDO" type="double" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="ventasMes"/>
+          <Argument type="int" name="ventasTotales"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularSalario" returnType="void" visibility="private"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Practica14.Consesionario" target="Practica14.Vendedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Practica14.Vendedor" target="Practica14.Trabajador"/>
+    <HasRelation name="autos" source="Practica14.Consesionario" target="Practica14.Auto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Auto&gt;"/>
+    <HasRelation name="employees" source="Practica14.Consesionario" target="Practica14.Vendedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Vendedor&gt;"/>
+    <HasRelation name="boss" source="Practica14.Consesionario" target="Practica14.Gerente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Practica14.Gerente" target="Practica14.Trabajador"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

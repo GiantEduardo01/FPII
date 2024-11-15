@@ -9,10 +9,6 @@ package Tarea10.Proyect03;
  * @author eduardo
  */
 public class Ejercicio06 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         final String[] OPERACIONES = {"Suma", "Resta", "Multiplicación", "Division", "Simplificación"};
         
