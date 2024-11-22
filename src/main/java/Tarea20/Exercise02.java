@@ -23,7 +23,7 @@ public class Exercise02 {
         PrintWriter pw;
         try {
             pw = new PrintWriter("./src/main/java/Tarea20/files/littleNumbers.txt");
-            pw.print(allNumbers);
+            pw.print(allNumbers); //Overwriting mode
             System.out.print("The ten first numbers have been writed");
             pw.close();
         } 
